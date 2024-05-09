@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ededed;
+
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 10%;
+    left: 0;
+    background-color: #EEAB8C;
+    z-index: 99;
+}
+
+.nav__content {
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-size: 25px;
+    color: #0c0c0c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+
+}
+
+nav .logo a:hover {
+    color: #B8D3C8;
+}
+
+nav .logo span {
+    color: #B8D3C8;
+}
+
+nav .home_btn {
+    background-color: #F8F8F8;
+    color: #EEAB8C;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+nav .home_btn:hover {
+    color: #B8D3C8;
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: #f0f3f5;
+    cursor: pointer;
+}
+
+ul {
+
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: #0c0c0c;
+    transition: 0.3s;
+
+}
+
+ul li a:hover {
+    border-top-color: #e8edee;
+    border-bottom-color: #e3e9eb;
+    color: #B8D3C8;
+}
+
+
+.section {
+
+    background-image: linear-gradient(to bottom, #B8D3C8, #EEAB8C);
+}
+
+.section_container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    color: #fff;
+    display: grid;
+    padding: 0 10%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    color: #0c0c0c;
+    font-weight: 600;
+    margin-bottom: .5rem;
+
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #0c0c0c;
+    margin-bottom: 1rem;
+}
+
+.title span {
+    font-weight: 600;
+    color: #EEAB8C;
+}
+
+.description {
+    line-height: 1.5rem;
+    color: #0c0c0c;
+    margin-bottom: 2rem;
+}
+
+.action__btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.action__btns a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background: #B8D3C8;
+    border: 2px solid #c8c5c5;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #0f0f0f;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.action__btns a:hover {
+    color: #EEAB8C;
+
+}
+
+.action__btn a:hover {
+    color: #f6f3f5;
+}
+
+.image {
+    display: grid;
+    place-items: center;
+}
+
+.image img {
+    width: 350px;
+    height: 350px;
+
+}
+
+.home_icon {
+
+    bottom: 30px;
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_icon a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #F8F8F8;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #F8F8F8;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home_icon a:hover {
+    color: #000;
+}
+
+@media (width < 750px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: 100%;
+        top: 85px;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #EEAB8C;
+        gap: 3rem;
+    }
+
+    nav #check:checked~ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+    }
+
+    .section_container {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image {
+        grid-area: 1/1/2/2;
+    }
+
+    .action__btns {
+        margin: auto;
+    }
+
+}
