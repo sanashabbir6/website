@@ -211,28 +211,6 @@ ul li a:hover {
     justify-content: space-between;
 }
 
-.home_icon a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: 2px solid #F8F8F8;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #F8F8F8;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.home_icon a:hover {
-    color: #000;
-}
-
 @media (width < 750px) {
     nav .checkbox {
         display: block;
